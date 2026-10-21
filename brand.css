@@ -1,0 +1,145 @@
+/* =========================================================
+   Hot developments Inc. — marca de água e direitos reservados
+   Usado em todas as páginas visíveis da plataforma.
+========================================================= */
+
+.hd-footer {
+    width: 100%;
+    padding: 26px 16px 30px;
+
+    color: var(--text-muted, #8b8b90);
+
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.hd-footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.hd-company {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.hd-watermark {
+    position: fixed;
+    right: 14px;
+    bottom: 10px;
+    z-index: 40;
+
+    color: rgb(128 128 134 / 0.55);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 760px) {
+    .hd-watermark {
+        right: 10px;
+        bottom: 6px;
+        font-size: 10px;
+    }
+}
+
+@media print {
+    .hd-watermark {
+        position: fixed;
+        color: rgb(128 128 134 / 0.7);
+    }
+}
+
+
+/* =========================================================
+   LOGÓTIPO HOTFLIXX (X em fitas + nome)
+   O símbolo usa a cor de destaque do tema; o nome usa a cor
+   do texto (branco no modo escuro, preto no modo claro).
+   O tamanho segue o font-size do elemento.
+========================================================= */
+
+.hf-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32em;
+
+    height: 1em;
+    line-height: 1;
+
+    vertical-align: middle;
+}
+
+.hf-mark,
+.hf-word {
+    display: inline-block;
+    flex-shrink: 0;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.hf-mark {
+    width: 0.75em;
+    height: 1em;
+
+    background: var(--logo-mark, var(--accent, #e50914));
+
+    -webkit-mask-image: url("brand/hotflixx-x.svg");
+    mask-image: url("brand/hotflixx-x.svg");
+}
+
+.hf-word {
+    height: 0.8em;
+    aspect-ratio: 485 / 100;
+
+    background: var(--logo-word, var(--text, currentColor));
+
+    -webkit-mask-image: url("brand/hotflixx-wordmark.svg");
+    mask-image: url("brand/hotflixx-wordmark.svg");
+}
+
+/* Versão a cores do símbolo (fitas vermelhas com sombra) */
+.hf-mark-color {
+    display: inline-block;
+    width: 0.75em;
+    height: 1em;
+
+    background: url("brand/hotflixx-x-cor.svg") center / contain no-repeat;
+}
+
+.hf-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Protege o logótipo de regras genéricas de "span" das páginas */
+span.hf-logo {
+    display: inline-flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+.register-brand span.hf-logo {
+    font-size: 30px !important;
+}
